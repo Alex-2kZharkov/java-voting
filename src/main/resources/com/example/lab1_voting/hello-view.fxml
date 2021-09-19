@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.lab1_voting.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="423.0" prefWidth="37.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1_voting.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane prefHeight="438.0" prefWidth="578.0" style="-fx-background-color: #EE886B#EE886B;">
+         <children>
+            <Label fx:id="welcomeText" layoutX="18.0" layoutY="28.0" prefHeight="22.0" prefWidth="302.0" text="Добро пожаловать в систему голосования" textAlignment="CENTER" textFill="#1c2b47">
+               <font>
+                  <Font name="Lato Regular" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="81.0" layoutY="208.0" mnemonicParsing="false" onAction="#onLoginConnectButtonClick" prefHeight="45.0" prefWidth="211.0" style="-fx-background-color: #1C2B47#1C2B47;" text="Войти в систему" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="exitButton" cancelButton="true" layoutX="81.0" layoutY="273.0" mnemonicParsing="false" onAction="#onExitButton" prefHeight="45.0" prefWidth="211.0" style="-fx-background-color: #1C2B47#1C2B47;" text="Закрыть приложение" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="loginField" layoutX="81.0" layoutY="80.0" prefHeight="26.0" prefWidth="211.0" />
+            <Label fx:id="loginLabel" layoutX="20.0" layoutY="80.0" prefHeight="20.0" prefWidth="108.0" text="Логин" textFill="#1c2b47">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordLabel" layoutX="18.0" layoutY="137.0" prefHeight="20.0" prefWidth="108.0" text="Пароль" textFill="#1c2b47">
+               <font>
+                  <Font name="Lato Regular" size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="81.0" layoutY="136.0" prefHeight="26.0" prefWidth="211.0" />
+         </children>
+      </AnchorPane>
+   </children>
 </VBox>
